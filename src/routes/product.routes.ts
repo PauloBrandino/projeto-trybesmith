@@ -1,5 +1,5 @@
 import express from 'express';
-import productController  from '../controller/product.controller'
+import productController from '../controller/product.controller';
 import validateProductBody from '../middlewares/validateProductBody';
 
 const route = express.Router();

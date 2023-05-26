@@ -1,4 +1,4 @@
-import { ServiceResponse } from "./ServiceResponse";
+import { ServiceResponse } from './ServiceResponse';
 
 export type Product = {
   id: number;
@@ -13,4 +13,4 @@ export type CreateProductResponse = ServiceResponse<{
   id: number;
   name: string;
   price: string;
-}>
+}>;
