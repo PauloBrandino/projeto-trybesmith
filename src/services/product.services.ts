@@ -14,13 +14,13 @@ async function createProduct(product: CreateProductInput): Promise<CreateProduct
   };
 }
 
-async function listProducts(): Promise<ListProductResponse>{
+async function listProducts(): Promise<ListProductResponse> {
   const list = await ProductModel.findAll();
   
   return {
     type: 'OK',
-    data: list
-  }
+    data: list,
+  };
 }
 
 export default {

@@ -18,4 +18,4 @@ export type CreateProductInput = Omit<Product, 'id'>;
 
 export type CreateProductResponse = ServiceResponse<ProductResponse>;
 
-export type ListProductResponse = ServiceResponse<ProductSequelizeModel[]>
+export type ListProductResponse = ServiceResponse<ProductSequelizeModel[]>;
