@@ -1,4 +1,4 @@
-import { CreateProductInput, CreateProductResponse } from 'src/types/Product';
+import { CreateProductInput, CreateProductResponse, ListProductResponse } from 'src/types/Product';
 import ProductModel from '../database/models/product.model';
 
 async function createProduct(product: CreateProductInput): Promise<CreateProductResponse> {
@@ -14,6 +14,16 @@ async function createProduct(product: CreateProductInput): Promise<CreateProduct
   };
 }
 
+async function listProducts(): Promise<ListProductResponse>{
+  const list = await ProductModel.findAll();
+  
+  return {
+    type: 'OK',
+    data: list
+  }
+}
+
 export default {
   createProduct,
+  listProducts,
 };

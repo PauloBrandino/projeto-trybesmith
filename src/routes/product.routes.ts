@@ -4,6 +4,7 @@ import validateProductBody from '../middlewares/validateProductBody';
 
 const route = express.Router();
 
-route.post('/products', validateProductBody, productController.createProduct);
+route.post('/', validateProductBody, productController.createProduct);
+route.get('/', productController.listProducts);
 
 export default route;
