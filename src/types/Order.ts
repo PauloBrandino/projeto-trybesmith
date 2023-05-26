@@ -7,7 +7,7 @@ export type Order = {
   productIds?: Product[];
 };
 
-type OrderReturn = {
+export type OrderReturn = {
   id: number,
   userId: number,
   productIds: number[] | undefined,
