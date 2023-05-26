@@ -1,5 +1,5 @@
 type SuccessType = 'OK' | 'CREATED';
-type ServiceTypeError = 'INVALID_DATA';
+type ServiceTypeError = 'INVALID_DATA' | 'UNAUTHORIZED';
 
 type ServiceResponseSuccess<T> = {
   type: SuccessType,
