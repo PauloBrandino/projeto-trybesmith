@@ -47,14 +47,16 @@ function priceValidate(req: Request, res: Response, next: NextFunction) {
 function orderValidate(req: Request, res: Response, next: NextFunction) {
   const { orderId } = req.body;
 
-  if(!orderId) return res.status(400).json({
-    message: '"orderId" is required'
-  });
+  if (!orderId) {
+    return res.status(400).json({
+      message: '"orderId" is required',
+    });
+  }
   return next();
 }
 
 export default {
   nameValidate,
   priceValidate,
-  orderValidate
+  orderValidate,
 };
