@@ -1,10 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-const secret = process.env.JWT_SECRET;
-
-if (!secret) {
-  throw new Error('missing JWT in .env');
-}
+const secret = process.env.JWT_SECRET || 'Só pra testar';
 
 type TokenPayload = {
   username: string;

@@ -8,7 +8,6 @@ async function listOrders(): Promise<ListOrderResponse> {
       model: ProductModel, as: 'productIds', attributes: { exclude: ['name', 'price', 'orderId'] },
     }],
   });
-
   const listWithProductIds = list.map((order) => {
     const arrayProductsId = order.dataValues.productIds?.map((product) => product.id);
     const newList = {
@@ -17,8 +16,6 @@ async function listOrders(): Promise<ListOrderResponse> {
     };
     return newList;
   }); 
-
-  console.log(listWithProductIds);
 
   return { type: 'OK', data: listWithProductIds };
 }
